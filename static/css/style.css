@@ -10,12 +10,51 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Inter", sans-serif;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.sedgwick-ave-regular {
+    font-family: "Sedgwick Ave", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inter-900 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.inter-500 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+
+.xxx-large {
+    font-size: 3rem;
+}
+
+.xx-large {
+    font-size: xx-large;
+}
+
+.x-large {
+    font-size: x-large;
+}
+
+.large {
+    font-size: large;
 }
 
 body {
@@ -43,12 +82,10 @@ body {
 
 .header .item.middle {
     font-weight: 900;
-    font-size: xx-large;
     color: var(--colour-charcoal);
 }
 
 .header .item.right {
-    font-size: x-large;
     height: auto;
 }
 
@@ -60,4 +97,73 @@ body {
 
 .icon-hover:hover {
     color: var(--colour-charcoal);
+}
+
+.main-content {
+    align-content: center;
+    text-align: center;
+    max-width: 70vw;
+    margin: auto;
+    margin-top: 6rem;
+}
+
+form > input + .row {
+	display:inline-block
+}
+
+.search-bar a {
+    /* float: left; */
+    /* display: block; */
+    color: black;
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.search-bar input[type=text] {
+    border-radius: 1rem 0 0 1rem;
+    border: none;
+    text-align: center;
+    width: 50%;
+}
+
+.row {
+    padding: 2vh 2vw 2vh 2vw;
+    margin-top: 3vh;
+    height: 7vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.row .item {
+    height: 100%;
+    font-size: 3vh;
+    padding: 0 2vw 0 2vw;
+}
+
+.search-bar .button {
+    border-radius: 0 1rem 1rem 0;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar .button:hover {
+    background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+    .search-bar a, .search-bar input[type=text] {
+        /* display: block; */
+        text-align: center;
+    }
+    .search-bar input[type=text] {
+        border: 1px solid #ccc;
+    }
 }

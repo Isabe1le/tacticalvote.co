@@ -7,26 +7,40 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sedgwick+Ave&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css" class="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <div class="header">
-        <a href="/search">
-            <div class="item pill-hover left">
+        <a href="#search">
+            <div class="large inter-500 item pill-hover left">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 Search
             </div>
         </a>
 
-        <div class="item middle">TacticalVote.co</div>
+        <div class="xx-large inter-900 item middle">TacticalVote.co</div>
 
         <a href="/redirect/github">
-            <div class="item icon-hover right">
+            <div class="x-large inter-500 item icon-hover right">
                 <i class="fa-brands fa-github"></i>
             </div>
         </a>
+    </div>
+
+    <div class="main-content">
+        <div class="xxx-large sedgwick-ave-regular call-to-action">
+            <u>Vote</u> to get the <u>Tories out</u>!
+        </div>
+        <div class="search-bar">
+            <form name="search" id="search" method="post" >
+                <div class="row">
+                    <input type="text" placeholder="Search by postcode..." class="item">
+                    <input type="submit" value="Search" class="item button"/>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
