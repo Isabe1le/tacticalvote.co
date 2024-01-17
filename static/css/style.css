@@ -1,0 +1,63 @@
+:root {
+    --colour-background: #EAEBEF;
+    --colour-primary: #4268B3;
+    --colour-very-light-grey:#cfd2db;
+    --colour-light-grey: #8b8e96;
+    --colour-dark-grey: #606771;
+    --colour-charcoal: #2A2A2A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: var(--colour-background);
+}
+
+.header {
+    /* background-color: #4268B3; */
+    max-width: 100%;
+    margin: 1vh;
+    padding: 2vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+
+.header .item {
+    width: fit-content;
+    padding: 1vw;
+    color: var(--colour-dark-grey);
+}
+
+.header .item.middle {
+    font-weight: 900;
+    font-size: xx-large;
+    color: var(--colour-charcoal);
+}
+
+.header .item.right {
+    font-size: x-large;
+    height: auto;
+}
+
+.pill-hover:hover {
+    color: var(--colour-charcoal);
+    background-color: var(--colour-very-light-grey);
+    border-radius: 10rem;
+}
+
+.icon-hover:hover {
+    color: var(--colour-charcoal);
+}
