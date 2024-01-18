@@ -34,13 +34,30 @@
             <u>Vote</u> to get the <u>Tories out</u>!
         </div>
         <div class="search-bar">
-            <form name="search" id="search" method="post" >
+            <form name="search" id="search_form" method="post" >
                 <div class="row">
-                    <input type="text" placeholder="Search by postcode..." class="item">
+                    <input type="text" placeholder="Search by postcode..." class="item" id="postcode_submit_value">
                     <input type="submit" value="Search" class="item button"/>
                 </div>
             </form>
         </div>
     </div>
+    <script>
+        document.getElementById("search_form").addEventListener("submit", searchInputSubmitted);
+
+        async function searchInputSubmitted(e) {
+            e.preventDefault();
+            var postcode = document.getElementById("postcode_submit_value").value;
+            // https://findthatpostcode.uk/postcodes/abcd-efg.json
+            let response = await fetch(`https://findthatpostcode.uk/postcodes/${postcode}.json`, {
+                method: "GET",
+            });
+            if (response.ok) {
+                let postcodeData = await response.json();
+                let pcon = postcodeData["data"]["attributes"]["pcon"];
+                window.location.replace(`/lookup/?s=${pcon}`);
+            }
+        }
+    </script>
 </body>
 </html>
