@@ -41,6 +41,15 @@ a {
       "slnt" 0;
 }
 
+.inter-400 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+
 .xxx-large {
     font-size: 3rem;
 }
@@ -156,6 +165,22 @@ form > input + .row {
 
 .search-bar .button:hover {
     background: #ccc;
+}
+
+.party-green {
+    color: #7FA312;
+}
+
+.party-snp {
+    color: #FFF481;
+}
+
+.party-labour {
+    color: #E11A23;
+}
+
+.party-libdem {
+    color: #FFCE0E;
 }
 
 @media screen and (max-width: 600px) {
