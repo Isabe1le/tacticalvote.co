@@ -183,6 +183,29 @@ form > input + .row {
     color: #FFCE0E;
 }
 
+.footer {
+    bottom: 0;
+    position: fixed;
+    max-width: 100%;
+    margin: 1vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+
+.footer .item {
+    width: fit-content;
+    padding: 1vw;
+    color: var(--colour-dark-grey);
+}
+
+.footer a {
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 600px) {
     .search-bar a, .search-bar input[type=text] {
         /* display: block; */
