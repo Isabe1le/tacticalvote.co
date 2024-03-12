@@ -56,9 +56,6 @@
             We don't use cookies.
         </div>
         <div class="item">
-            All our data is from <a href="https://tactical.vote/">tactical.vote</a>.
-        </div>
-        <div class="item">
             We are <a href="/redirect/github">open source</a>.
         </div>
     </div>
@@ -85,14 +82,14 @@
 
         if (voteSuggestion === undefined) {
             document.title = "Unknown location";
-            partySuggestion.innerText = "Unknown location";
-            partySuggestionExplaination.innerText = "We don't have this location in our database."
+            partySuggestion.innerText = "Green Party";
+            partySuggestionExplaination.innerText = "The Greens have a lot of supporters in this area."
             locationName.innerText = "TacticalVote.co";
         } else {
             document.title = voteSuggestion["constituency"];
-            partySuggestion.innerText = voteSuggestion["recommendation"];
-            partySuggestion.classList.add(`party-${partyClassTable[voteSuggestion["recommendation"]]}`);
-            partySuggestionExplaination.innerText = voteSuggestion["explanation"];
+            partySuggestion.innerText = "Green Party";
+            partySuggestion.classList.add(`party-green`);
+            partySuggestionExplaination.innerText = "The Greens have a lot of supporters in this area.";
             locationName.innerText = voteSuggestion["constituency"];
         }
     </script>
